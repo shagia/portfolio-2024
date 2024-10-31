@@ -1,0 +1,29 @@
+---
+// import BlogPost from "../../layouts/BlogPost.astro";
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+	const posts = await Astro.glob('../../content/portfolio/*/*.mdx')
+	
+	let allSortedPosts = posts.sort(
+		(a, b) =>
+			new Date(b.frontmatter.date).valueOf() -
+			new Date(a.frontmatter.date).valueOf()
+	);
+	
+	return allSortedPosts.map((post) => {
+		return {
+			params: { slug: post.frontmatter.slug },
+			props: { ...post },
+		};
+	});
+}
+
+// const content = Astro.props;
+const {path} = Astro.params
+const { Content, frontmatter } = Astro.props;
+--- 
+
+<Layout title={frontmatter.title}>
+	<Content />
+</Layout>
