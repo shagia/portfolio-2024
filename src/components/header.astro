@@ -1,0 +1,69 @@
+---
+import Logo from '../static/images/ui/logo.svg'
+import { getCollection } from 'astro:content';
+
+
+const allWikiPosts = await getCollection('wiki');
+const allPortfolioPosts = await getCollection('portfolio');
+const allBlogPosts = await getCollection('blog');
+
+---
+
+<div class="header-root">
+	<a href='/'><div class="header-logo">
+		<img src={Logo.src} />
+	</div></a>
+	<div class="header-buttons" transition:persist>
+		<ul class="menu-tree">
+			
+					<li><a href={`/wiki/about`}>About</a></li>
+				
+			<li>
+				<details>
+					<summary>Portfolio</summary>
+					<ul>
+						{ allPortfolioPosts.map((p: any) => {
+						return(
+							<li><a href={`/portfolio/${p.slug}`}>{p.data.title}</a></li>
+						)})}
+					</ul>
+				</details>
+			</li>
+			<li>
+				<details>
+					<summary>Wiki</summary>
+					<ul>
+						{ allWikiPosts.map((p: any) => {
+						return(
+							<li><a href={`/wiki/${p.slug}`}>{p.data.title}</a></li>
+						<details>
+							<summary>Contents</summary>
+							<ul>
+								<li>Enabling Fingerprint Login</li>	 
+							</ul>
+						</details>
+						)})}
+					</ul>
+				</details>
+			</li>	
+			<li>
+				<details>
+					<summary>Blog</summary>
+					<ul>
+						{ allBlogPosts.map((p: any) => {
+						return(
+							<li><a href={`/wiki/${p.slug}`}>{p.data.title}</a></li>
+						<details>
+							<summary>Contents</summary>
+							<ul>
+								<li>Enabling Fingerprint Login</li>	 
+							</ul>
+						</details>
+						)})}
+					</ul>
+				</details>
+			</li>	
+		</ul>
+		</div>
+	<div class="header-footer">© 2024 Devin S.G</div>
+</div>
