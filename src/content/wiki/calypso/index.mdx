@@ -1,0 +1,57 @@
+---
+title: "TR_SERV 'Calypso' [01]"
+subtitle: WorkstationServer
+asciiLogo: ./asciiEmblem.svg
+specs: ["AMD Threadripper 1950X @ 3.4GHz", "32GB DDR4 3200", "16TB Storage", "2018 - Present"]
+description: "The monster at heart"
+images: ['./Screenshot2020517.png', '1729548714.png']
+slug: 'calypso'
+date: ''
+
+---
+import AsciiContainer from '../../../components/Ascii'
+import Logo from './asciiEmblem.svg'
+import { Image } from 'astro:assets';
+
+<AsciiContainer Logo={Logo} Specs={frontmatter.specs} client:load />
+
+<div class="slot-content">
+	<div class="content-header">
+		# {frontmatter.title}
+		<small>WorkstationServer</small>
+	</div>
+	Originally a Hackintosh (check out [OpenCore](https://dortania.github.io/OpenCore-Install-Guide/)), this workstation turned server has helped me build tons of web, video, music and graphics projects since 2018, now half a decade ago. Originally, the CPU and Motherboard was sold as a bundle by a seller on Craigslist for pleasantly cheap. I asked if I could buy the motherboard first and come back a couple of weeks later to buy the CPU, he agreed.
+
+	![Desktop circa 2020](Screenshot2020517.png)
+	<small>Desktop circa 2020</small>
+
+	The rest of the components were my doing, which consisted of some not so great memory units %% name the units on PCPartPicker %%, a decent Noctua fan %% name the fan via pcpartpicker %%, a HD 7870 gifted by a friend, some hard drives, and a power supply. It was the bare minimum to be running a 1950X with and the hard drives weren't helping, but the busiest workflows were now faster than I'd ever hope, and coming up with component upgrade after upgrade, this never really got old for me up until 2024 when I picked up an M2 Mac Mini.
+
+	For my current uses as a server it's very overkill, but I intend on this being my 'vault' by growing it for more i.e VMs (including Docker), AI usage (Ollama), content rendering (Cinema4D Team Renderer, Davinci Resolve), media streaming (Roon, Plex, Invidious, and Channels are all running simultaneously), game streaming (I need an output dongle), and archiving+backing up my own (lossless!) music and audio work in ZFS while also uploading it to a cloud. Right now, it's not in the place it's supposed to be, but so wasn't it when I first picked it up:
+	
+	<div class="table-container">
+	| Logo | Component | Details |
+	| ------ | ------------ | --------------------------------------------- |
+	| | CPU | AMD Threadripper 1950X @ 3.4GHz |
+	| | GPU | AMD Radeon VII (currently disabled, headless) |
+	| | RAM | 32GB DDR4 3200 |
+	| | Motherboard | ASUS Asus ROG Zenith Extreme Alpha |
+	| Insert | Storage | Test |
+	| | Networking<sup>A</sup> | Aquantia AQC-107 @ 2.5Gbps, supports 10Gbps |
+	| | Networking<sup>B</sup> | Intel® I211-AT (Disabled for now) |
+	| | OS | Ubuntu |
+	| | DE | Window Maker |
+	</div>
+	
+	![Today, via ssh - For the most part, idle](1729548714.png)
+	<small>Today, via ssh - For the most part, idle</small>
+	
+	Ubuntu is my temporary flavor of choice here. Although I love AUR and rolling release software, the purpose of this server is ultimately sit it and forget it, and a rolling release just isn't suitable for this when accounting for the user intervention that's required there. At the end of the day in the future, FreeNAS or unRAID will be the winner.
+
+	# Possible Changes
+	* Ubuntu has been annoying, a switch to unRaid is still looked at
+	* CPU upgrade? Cheap gen 2 Threadripper on eBay
+	* Install the two extra 8TB drives that I own for storage redundancy or a total of 32TBs of storage
+	* Please get it in a server case and rack it
+
+</div>

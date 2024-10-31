@@ -1,0 +1,53 @@
+---
+title: "ASUS_LT 'NAVI ii' [02]"
+subtitle: WorkstationLaptop
+asciiLogo: ./asciiEmblem.svg
+specs: ["Intel i7-1165G7 @ 4.7GHz", "16GB DDR4 3200", "1TB Storage", "2024 - Present"]
+description: "You mustn't confuse it with the real world"
+images: ['./1729628376.png']
+slug: 'navi-ii'
+date: ''
+
+---
+import AsciiContainer from '../../../components/Ascii'
+import Logo from './asciiEmblem.svg'
+import { Image } from 'astro:assets';
+
+<AsciiContainer Logo={Logo} Specs={frontmatter.specs} client:load />
+
+<div class="slot-content">
+	<div class="content-header">
+		# {frontmatter.title}
+		<small>WorkLaptop</small>
+	</div>
+	
+	This laptop was basically gifted to me by a good friend after hearing about some trouble I ran into finding a reliable device. It'll be cherished for very long not only for the principal, but also because it's a beyond average machine for web development and music production on Linux. The perfect size, and a fine spec.
+	
+	<div class="table-container">
+	| Logo   | Component  | Details                                                                                                                                                                              |
+	| ------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+	|        | CPU        | Intel i7-1165G7 @ 4.700GHz                                                                                                                                                           |
+	|        | GPU        | Intel TigerLake-LP GT2 [Iris Xe Graphics]                                                                                                                                            |
+	|        | RAM        | 16GBs DDR4 3200, soldered (15.6GB available in OS)                                                                                                                                   |
+	| Insert | Storage    | SAMSUNG MZVLB512HBJQ-000L7 ([upgradable](https://psref.lenovo.com/syspool/Sys/PDF/ThinkPad/ThinkPad_L13_Yoga_Gen_2_Intel/ThinkPad_L13_Yoga_Gen_2_Intel_Spec.pdf), PCIe 3.0 x2 or x4) |
+	|        | Audio      | Generic HD Audio Device, Pipewire                                                                                                                                                    |
+	|        | Speaker    | 2 x 2W Speakers (Sounds great for ants!)                                                                                                                                             |
+	|        | Networking | Intel Wi-Fi 6 AX201                                                                                                                                                                  |
+	|        | OS         | Arch Linux                                                                                                                                                                           |
+	|        | WM         | Hyprland                                                                                                                                                                             |
+	</div>
+	This laptop can also fold. The Yoga name is (or was) for laptops by Lenovo that are able to be converted into a tablet. You be your own judge, but I find it neat to use for watching long videos and using it for games, with my only issue being that the keyboard will be exposed from behind, which looks funny. The display transform function works on Gnome, [but needs your own input on Hyprland.](obsidian://open?vault=Obsidian%20Vault&file=Tech%2FL13%20Yoga%2FBuild%20Wiki%2FEnabling%20support%20for%20the%20convertible%20display)
+	
+	For information on the Arch build, [read the build log](obsidian://open?vault=Obsidian%20Vault&file=Tech%2FL13%20Yoga%2FBuild%20Log%20Page).
+	
+	[Images]
+	
+	# Possible Changes
+	* Upgrade the nvme drive to a 1TB SK hynix Gold P31
+	* Why not build an install script that reinstalls every program I use here?
+	* stickerbomb!!
+	# Possible Names
+	- BUDi
+	- 
+
+</div>
