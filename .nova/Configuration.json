@@ -4,32 +4,17 @@
   ],
   "eablokker.tabsSidebar.config.customKindGroupsOrder" : [
     "plaintext",
-    "typescript",
     "astro",
-    "xml",
-    "javascript",
     "scss",
     "json"
   ],
   "eablokker.tabsSidebar.config.customTabOrder" : [
-    "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/content\/portfolio\/voia\/index.mdx",
-    "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/content\/config.ts",
-    "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/layouts\/Layout.astro",
     "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/pages\/wiki\/about.astro",
-    "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/tsconfig.json",
-    "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/content\/wiki\/navi-ii\/index.mdx",
-    "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/content\/wiki\/calypso\/asciiLogo.svg",
-    "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/content\/wiki\/calypso\/index.mdx",
-    "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/astro.config.mjs",
     "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/content\/portfolio\/cod\/index.mdx",
-    "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/pages\/wiki\/%5Bslug%5D.astro",
     "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/pages\/index.astro",
-    "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/components\/Ascii.jsx",
-    "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/content\/portfolio\/yrmedia\/index.mdx",
-    "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/pages\/portfolio\/%5Bslug%5D.astro",
     "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/components\/header.astro",
     "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/styles\/global.scss",
-    "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/env.d.ts"
+    "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/.nova\/Configuration.json"
   ],
   "workspace.preview_type" : "custom",
   "workspace.preview_url" : "http:\/\/localhost:4322\/"
