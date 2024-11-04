@@ -37,11 +37,11 @@
 	}
 
 	50% {
-		bottom: 70px;
+		bottom: 40px;
 	}
 
 	70% {
-		bottom: 70px;
+		bottom: 40px;
 	}
 
 	90% {
@@ -65,8 +65,8 @@
 
 html {
 	height: 100%;
-	font-family: "IBM Plex Mono", monospace;
-	font-size: 0.8rem;
+	font-family: "JetBrains Mono", monospace;
+	font-size: 1rem;
 	font-weight: 300;
 	background-color: rgba(0, 0, 0, 1)
 }
@@ -154,11 +154,13 @@ h5 {
 			.card-title {
 				.card-title-left {
 					font-weight: bold;
+					font-size: 1rem;
 				}
 
 				display: flex;
 				justify-content: space-between;
 				padding-bottom: 1rem;
+				align-items: center;
 			}
 
 			img {
@@ -213,11 +215,13 @@ h5 {
 			.card-title {
 				.card-title-left {
 					font-weight: bold;
+					font-size: 1rem;
 				}
 
 				display: flex;
 				justify-content: space-between;
 				padding-bottom: 1rem;
+				align-items: center;
 			}
 
 			img {
