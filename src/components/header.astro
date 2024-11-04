@@ -52,7 +52,7 @@ const allBlogPosts = await getCollection('blog');
 					<ul>
 						{ allBlogPosts.map((p: any) => {
 						return(
-							<li><a href={`/wiki/${p.slug}`}>{p.data.title}</a></li>
+							<li><a href={`/blog/${p.slug}`}>{p.data.title}</a></li>
 						<details>
 							<summary>Contents</summary>
 							<ul>
