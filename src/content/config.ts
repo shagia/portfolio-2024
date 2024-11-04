@@ -9,6 +9,10 @@ const portfolioPostCollection = defineCollection({
 		description: z.string(),
 		tech: z.array(z.string()),
 		images: z.array(image()),
+		date: z.date(),
+		dateRange: z.string(),
+		dateRangeNew: z.array(z.string()),
+		present: z.boolean(),
 	})
 });
 const wikiPostCollection = defineCollection({ 
