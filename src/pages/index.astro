@@ -5,6 +5,14 @@ import Logo from '../static/images/ui/logo.svg'
 
 const allWikiPosts = await getCollection('wiki');
 const allPortfolioPosts = await getCollection('portfolio');
+const allBlogPosts = await getCollection('blog');
+
+
+
+allPortfolioPosts.sort((a, b) => {
+	return +new Date(b.data.date) - +new Date(a.data.date)
+	// return Boolean(b.data.present) - Boolean(a.data.present)
+})
 
 ---
 
@@ -16,24 +24,12 @@ const allPortfolioPosts = await getCollection('portfolio');
 				{ allPortfolioPosts.map((p: any) => {
 				return(
 				<div class="card-container">
-					<div class="card-title">
-						<b>{p.data.title}</b>
-					</div>
 					<a href={`/portfolio/${p.slug}`}>
-						<img src={p.data.images[0].src} />
-					</a>
-				</div>
-				)})}
-			</div>
-		</div>
-		<div class="index-container">
-			<h1>Latest Wiki Posts</h1>
-			<div class="wiki-view">
-				{ allWikiPosts.map((p: any) => {
-				return (
-				<div class="card-container">
-					<a href={`/wiki/${p.slug}`}>
-						<img src={p.data.asciiLogo.src} />
+						<div class="card-title">
+							<div class="card-title-left">{p.data.title}</div>
+							<div class="card-title-right">{p.data.dateRange}</div>
+						</div>
+						<img class="img-util" src={p.data.images[0].src} />
 					</a>
 				</div>
 				)})}
@@ -41,14 +37,48 @@ const allPortfolioPosts = await getCollection('portfolio');
 		</div>
 		<div class="index-container">
 			<h1>Latest Blog Posts</h1>
-			Something something
+			<div class="blog-view">
+				{ allBlogPosts.map((p: any) => {
+					
+				return (	
+				<div class="card-container">
+					<a href={`/blog/${p.slug}`}>
+						<div class="card-title">
+							<div class="card-title-left">{p.data.title}</div>
+							<div class="card-title-right">{p.data.date}</div>
+						</div>
+						<div class="post-text-border">
+							<div class="post-text">
+							{p.data.description}
+							</div>
+						</div>
+					</a>
+				</div>
+			)})}
+				<div class="card-container">
+					<a href={}>
+						<div class="card-title">
+							<div class="card-title-left">f</div>
+							<div class="card-title-right">f</div>
+						</div>
+						iejfiefpjewfopejiop
+					</a>
+				</div>
+			</div>
 		</div>
-		
+
 		<hr><br>
 		<div class="emblem-container">
-			<img class="emblem" alt="Devin S.G logo" src={Logo.src}/>
+			<img class="emblem" alt="Devin S.G logo" src={Logo.src} />
 		</div>
-		<p>Consequat est id aliqua in esse aliqua sunt sint commodo excepteur nulla. Pariatur ex laborum consequat voluptate mollit pariatur mollit dolor sint. Reprehenderit cupidatat cupidatat proident dolor minim sint. Ad reprehenderit labore elit deserunt. Officia nostrud aliqua incididunt pariatur culpa elit anim irure culpa ipsum minim qui dolore duis. Irure amet magna incididunt velit veniam adipisicing elit. Velit velit officia ex excepteur anim sunt. Laboris nisi do sunt aliqua commodo non in in voluptate Lorem occaecat et. Laboris aute pariatur enim do laboris dolor eiusmod eu enim proident pariatur. Pariatur sint commodo sint do aliqua cupidatat dolor nisi veniam do enim. Reprehenderit minim consectetur ipsum commodo ex exercitation veniam eu consequat sint velit ea pariatur. Eiusmod est aute et laborum labore commodo nostrud irure excepteur aute consequat aliquip veniam.</p>
+		<p>My name is Devin S.G. and I'm an entertainment focused front-end engineer that's discovering my next goal
+			with helping build an interactive, entertainment platform. <br /><br />
+
+			I've build front ends for journalists, musicians, gamers, engineers and producers for their own projects.
+			Some of the tools I've made were built using:
+			React, React Native, SASS, Vue, Redux, and more.<br /><br />
+			■
+		</p>
 	</main>
 </Layout>
 
