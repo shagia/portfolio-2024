@@ -5,7 +5,6 @@
   "eablokker.tabsSidebar.config.customKindGroupsOrder" : [
     "plaintext",
     "astro",
-    "scss",
     "json",
     "typescript",
     "markdown",
@@ -23,7 +22,6 @@
     "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/content\/config.ts",
     "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/content\/blog\/why-bother\/index.mdx",
     "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/components\/header.astro",
-    "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/styles\/global.scss",
     "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/components\/header.jsx",
     "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/content\/portfolio\/post-club\/index.mdx",
     "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/.nova\/Configuration.json",
