@@ -9,6 +9,11 @@ const allBlogPosts = await getCollection('blog');
 
 ---
 
+<div class="header-mobile">
+	<a href='/'><div class="header-logo">
+		<img src={Logo.src} />
+	</div></a>
+</div>
 <div class="header-root">
 	<a href='/'><div class="header-logo">
 		<img src={Logo.src} />
@@ -16,7 +21,7 @@ const allBlogPosts = await getCollection('blog');
 	<div class="header-buttons" transition:persist>
 		<ul class="menu-tree">
 			
-					<li><a href={`/wiki/about`}>About</a></li>
+					<li><a href={`/about`}>About</a></li>
 				
 			<li>
 				<details>
