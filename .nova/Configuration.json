@@ -8,24 +8,28 @@
     "scss",
     "json",
     "typescript",
-    "markdown"
+    "markdown",
+    "javascript"
   ],
   "eablokker.tabsSidebar.config.customTabOrder" : [
-    "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/pages\/wiki\/about.astro",
     "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/content\/portfolio\/cod\/index.mdx",
+    "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/content\/wiki\/navi-ii\/index.mdx",
     "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/content\/portfolio\/reactor\/index.mdx",
     "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/content\/portfolio\/yrmedia\/index.mdx",
     "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/content\/portfolio\/voia\/index.mdx",
     "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/pages\/index.astro",
+    "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/pages\/wiki\/%5Bslug%5D.astro",
     "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/TODO.md",
     "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/content\/config.ts",
     "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/content\/blog\/why-bother\/index.mdx",
     "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/components\/header.astro",
     "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/styles\/global.scss",
+    "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/components\/header.jsx",
     "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/content\/portfolio\/post-club\/index.mdx",
     "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/.nova\/Configuration.json",
     "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/pages\/blog\/%5Bslug%5D.astro",
-    "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/pages\/portfolio\/%5Bslug%5D.astro"
+    "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/pages\/portfolio\/%5Bslug%5D.astro",
+    "file:\/\/\/Users\/devin.sg\/Development\/portfolio-site-2024\/src\/pages\/about.astro"
   ],
   "workspace.preview_type" : "custom",
   "workspace.preview_url" : "http:\/\/localhost:4322\/"
