@@ -139,6 +139,7 @@ h5 {
 .highlight-link{
 	transition: all 0.5s;
 	filter: invert(1);
+	line-height: 1rem;
 	text-decoration: none;
 	&:after {
 		content: ' →'
