@@ -24,7 +24,7 @@ const {path} = Astro.params
 const { Content, frontmatter } = Astro.props;
 --- 
 
-<Layout title={frontmatter.title}>
+<Layout title={'Devin S.G.: ' + frontmatter.title}>
 	<Content />
 	<div class="closing-article">
 		<p>
