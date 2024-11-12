@@ -36,17 +36,17 @@ const allBlogPosts = await getCollection('blog');
 			</li>
 			<li>
 				<details>
-					<summary>Wiki</summary>
+					<summary>Wiki (In Construction)</summary>
 					<ul>
 						{ allWikiPosts.map((p: any) => {
 						return(
 							<li><a href={`/wiki/${p.slug}`}>{p.data.title}</a></li>
-						<details>
+						<!-- <details>
 							<summary>Contents</summary>
 							<ul>
 								<li>Enabling Fingerprint Login</li>	 
 							</ul>
-						</details>
+						</details> -->
 						)})}
 					</ul>
 				</details>
@@ -58,12 +58,6 @@ const allBlogPosts = await getCollection('blog');
 						{ allBlogPosts.map((p: any) => {
 						return(
 							<li><a href={`/blog/${p.slug}`}>{p.data.title}</a></li>
-						<details>
-							<summary>Contents</summary>
-							<ul>
-								<li>Enabling Fingerprint Login</li>	 
-							</ul>
-						</details>
 						)})}
 					</ul>
 				</details>
