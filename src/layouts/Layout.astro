@@ -2,9 +2,11 @@
 interface Props {
 	title: string;
 }
+import "@fontsource/jetbrains-mono";
 import { ViewTransitions } from 'astro:transitions';
 import "../styles/global.scss";
 import Header from '../components/header.astro'
+
 
 const { title, headings } = Astro.props;
 
