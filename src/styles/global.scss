@@ -136,7 +136,25 @@ h5 {
 
 .content-header {}
 
-
+.highlight-link{
+	transition: all 0.5s;
+	filter: invert(1);
+	text-decoration: none;
+	&:after {
+		content: ' →'
+	}
+	&:link {
+		color: black;
+	}
+	&:visited {
+		color: inherit;
+	}
+	&:hover {
+		filter: invert(0);
+	}
+	padding: 0px 4px;
+	background-color: greenyellow;
+}
 
 .article-end {
 	animation-name: blink-text;
@@ -349,6 +367,7 @@ h5 {
 	padding-right: 70px;
 	max-width: 880px;
 	height: 100%;
+	line-height: 1.5rem;
 }
 
 hr {
