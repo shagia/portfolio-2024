@@ -3,12 +3,15 @@ interface Props {
 	title: string;
 }
 import "@fontsource/jetbrains-mono";
+import { SEO } from "astro-seo";
 import { ViewTransitions } from 'astro:transitions';
 import "../styles/global.scss";
 import Header from '../components/header.astro'
 
 
 const { title, headings } = Astro.props;
+
+
 
 ---
 
@@ -19,8 +22,34 @@ const { title, headings } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
+		<SEO
+		title={"Devin S.G.: " + title}
+		description="My name is Devin S.G. and I'm an entertainment focused front-end engineer that's discovering my next goal with helping build an interactive, entertainment platform."
+		openGraph={{
+			basic: {
+				title: "Devin S.G.: " + title,
+				type: "website",
+				image: '/socialimg.jpg',
+				url: 'https://devin.sg'
+			},
+			optional: {
+				description: "My name is Devin S.G. and I'm an entertainment focused front-end engineer that's discovering my next goal with helping build an interactive, entertainment platform.",
+				locale: "en_US",
+				siteName: "Devin S.G.",
+			},
+			image: {
+				alt: "Logo picture"
+			}
+		}}
+		twitter={{
+			title: "Devin S.G.: " + title,
+			description: "My name is Devin S.G. and I'm an entertainment focused front-end engineer that's discovering my next goal with helping build an interactive, entertainment platform.",
+			creator: "@xshagia",
+			card: "summary_large_image",
+			image: "https://devin.sg/socialimg.jpg",
+			imageAlt: "Logo picture",
+		}}></SEO>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{title}</title>
 	</head>
 	<body>
 		<div class="page-wrap">
