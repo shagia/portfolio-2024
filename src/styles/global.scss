@@ -566,11 +566,14 @@ main {
 			align-items: center;
 			align-content: space-around;
 			height: 100%;
+			width: 100%;
 		}
 		display: none;
 		width: 349px;
 	}
-	.header-logo{
+	.header-logo {
+		
+		left: 0px !important;
 	}
 	
 	.mobileExit{
