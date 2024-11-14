@@ -9,60 +9,85 @@ const allBlogPosts = await getCollection('blog');
 
 ---
 
-<div class="header-mobile">
-	<a href='/'><div class="header-logo">
+<div class="header-mobile" transition:persist>
+	<div class="header-logo-toggle">
 		<img src={Logo.src} />
-	</div></a>
+	</div>
 </div>
-<div class="header-root">
-	<a href='/'><div class="header-logo">
-		<img src={Logo.src} />
-	</div></a>
-	<div class="header-buttons" transition:persist>
-		<ul class="menu-tree">
-			
-					<li><a href={`/about`}>About</a></li>
-				
-			<li>
-				<details>
-					<summary>Portfolio</summary>
-					<ul>
-						{ allPortfolioPosts.map((p: any) => {
-						return(
+<div class="header-root" transition:persist>
+	<div class="mobile-header-exit">X</div>
+	<div class="header-flex-container">
+		<a href='/'>
+			<div class="header-logo">
+				<img src={Logo.src} />
+			</div>
+		</a>
+		<div class="header-buttons">
+			<ul class="menu-tree">
+
+				<li><a href={`/about`}>About</a></li>
+
+				<li>
+					<details>
+						<summary>Portfolio</summary>
+						<ul>
+							{ allPortfolioPosts.map((p: any) => {
+							return(
 							<li><a href={`/portfolio/${p.slug}`}>{p.data.title}</a></li>
-						)})}
-					</ul>
-				</details>
-			</li>
-			<li>
-				<details>
-					<summary>Wiki (In Construction)</summary>
-					<ul>
-						{ allWikiPosts.map((p: any) => {
-						return(
+							)})}
+						</ul>
+					</details>
+				</li>
+				<li>
+					<details>
+						<summary>Wiki (In Construction)</summary>
+						<ul>
+							{ allWikiPosts.map((p: any) => {
+							return(
 							<li><a href={`/wiki/${p.slug}`}>{p.data.title}</a></li>
-						<!-- <details>
+							<!-- <details>
 							<summary>Contents</summary>
 							<ul>
 								<li>Enabling Fingerprint Login</li>	 
 							</ul>
 						</details> -->
-						)})}
-					</ul>
-				</details>
-			</li>	
-			<li>
-				<details>
-					<summary>Blog</summary>
-					<ul>
-						{ allBlogPosts.map((p: any) => {
-						return(
+							)})}
+						</ul>
+					</details>
+				</li>
+				<li>
+					<details>
+						<summary>Blog</summary>
+						<ul>
+							{ allBlogPosts.map((p: any) => {
+							return(
 							<li><a href={`/blog/${p.slug}`}>{p.data.title}</a></li>
-						)})}
-					</ul>
-				</details>
-			</li>	
-		</ul>
+							)})}
+						</ul>
+					</details>
+				</li>
+			</ul>
 		</div>
-	<div class="header-footer">© 2024 Devin S.G</div>
+		<div class="header-footer">© 2024 Devin S.G</div>
+	</div>
 </div>
+<script defer>
+	let mobileToggle = document.querySelector(".header-logo-toggle")
+	let mobileExit = document.querySelector(".mobile-header-exit")
+	let menuRoot = document.querySelector('.header-root')
+	let checkQuery = window.matchMedia("(min-width: 923px)");
+
+	mobileToggle.addEventListener("mousedown", e => {
+		menuRoot.style.setProperty("display", "flex")
+	})
+	mobileExit.addEventListener("mousedown", e => {
+		menuRoot.style.setProperty("display", "none")
+	})
+	checkQuery.onchange = (e) => {
+		if (e.matches) {
+			menuRoot.style.setProperty("display", "flex")
+		} else {
+			menuRoot.style.setProperty("display", "none")
+		}
+	}
+</script>

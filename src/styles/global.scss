@@ -329,7 +329,7 @@ h5 {
 	}
 
 	.header-footer {
-		padding-bottom: 10px;
+		padding-bottom: 30px;
 	}
 
 	.menu-tree {
@@ -338,18 +338,22 @@ h5 {
 	summary {
 		font-weight: 500;
 	}
+	.header-flex-container{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		align-content: space-around;
+		height: 100%;
+	}
 	
 	background-color: rgba(207, 207, 207, 1);
 
 	border-right: solid 1px black;
 	border-radius: 4px 0 0 4px;
 	position: fixed;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-	align-content: space-around;
+	display: block;
 
 	height: 100%;
 	width: 349px;
@@ -369,6 +373,11 @@ h5 {
 	max-width: 880px;
 	height: 100%;
 	line-height: 1.5rem;
+}
+
+
+.mobile-header-exit {
+	display: none;
 }
 
 hr {
@@ -501,6 +510,11 @@ main {
 		}
 	}
 }
+@media screen and (min-width: 923px) {
+	
+}
+
+
 
 @media screen and (max-width: 1370px) {
 	html {
@@ -511,6 +525,8 @@ main {
 			img {
 				max-width: 300px;
 			}
+			
+			left: 26px;
 		}
 		.header-buttons {
 			top: 300px;
@@ -542,7 +558,23 @@ main {
 	}
 	
 	.header-root {
+		.header-flex-container{
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			align-content: space-around;
+			height: 100%;
+		}
 		display: none;
+		width: 349px;
+	}
+	.header-logo{
+	}
+	
+	.mobileExit{
+		position: absolute;
 	}
 	
 	.right-side {
@@ -553,7 +585,7 @@ main {
 		
 	}
 	.header-mobile {
-		.header-logo {
+		.header-logo-toggle {
 			img {
 				max-width: 95px;
 			}
@@ -569,6 +601,32 @@ main {
 		width: 100%;
 		height: 60px;
 		z-index: 9;
+	}
+	.mobile-header-exit {
+		display: block;
+		position: fixed;
+		left: 10px;
+		top: 10px;
+		
+		transition: all 0.5s;
+		filter: invert(1);
+		line-height: 1rem;
+		text-decoration: none;
+		&:before {
+			content: '← '
+		}
+		&:link {
+			color: black;
+		}
+		&:visited {
+			color: inherit;
+		}
+		&:hover {
+			filter: invert(0);
+		}
+		padding: 10px;
+		background-color: greenyellow;
+		cursor: pointer;
 	}
 	
 	.portfolio-view {
