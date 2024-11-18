@@ -10,8 +10,8 @@ const allBlogPosts = await getCollection('blog');
 
 
 allPortfolioPosts.sort((a, b) => {
-	return +new Date(b.data.date) - +new Date(a.data.date)
-	// return Boolean(b.data.present) - Boolean(a.data.present)
+	//return +new Date(b.data.date) - +new Date(a.data.date)
+	return Boolean(b.data.featured) - Boolean(a.data.featured)
 })
 
 ---

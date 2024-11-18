@@ -13,6 +13,7 @@ const portfolioPostCollection = defineCollection({
 		dateRange: z.string(),
 		dateRangeNew: z.array(z.string()),
 		present: z.boolean(),
+		featured: z.boolean(),
 	})
 });
 const wikiPostCollection = defineCollection({ 
