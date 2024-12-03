@@ -5,5 +5,5 @@ TODO: Please finalize a stylesheet naming convention and clean it up. "small-pic
 TODO: Parse all dates into 'Month YEAR' format.
 TODO: Convert all pixel units to resizable units
 
-IDEA: Turn the front page data getters into objects that can be revealed on conditions.
+IDEA: Turn the front page data getters into objects that can be revealed on conditions. I.e: If a post is more than a specific amount of months old, don't show it, and if no articles are below the threshold, hide the component. It's a logic exercise.
 NOTE: It's a little nonsense that the ASCII containers take in SVGs instead of straight text.
