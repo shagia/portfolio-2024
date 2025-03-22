@@ -405,6 +405,10 @@ hr {
 		border-right: 1px solid rgb(180, 180, 180);
 		border-radius: 5px;
 		margin: 0 2px 0 2px;
+		max-width: 200px;
+		img {
+			border: none;
+		}
 	}
 
 	td {
