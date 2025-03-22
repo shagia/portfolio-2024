@@ -25,3 +25,4 @@ pnpm-debug.log*
 
 # Nova editor folder
 .nova/
+.nova/Configuration.json
