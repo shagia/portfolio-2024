@@ -562,6 +562,14 @@ main {
 @media screen and (max-width: 923px) {
 	html {
 	}
+	.index-container {
+		.blog-view {
+			.card-container {
+				width: unset;
+				max-width: unset;
+			}
+		}
+	}
 	
 	.header-root {
 		.header-flex-container{
@@ -647,5 +655,7 @@ main {
 			width: 100%;
 			margin: 0 !important;
 		}
+
+		
 	}
 }
